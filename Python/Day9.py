@@ -1,3 +1,5 @@
+from pty import CHILD
+
 
 class Example:
     def add(self, a, b=None, c=None):
@@ -48,6 +50,53 @@ print(my_cat.age)
 print(my_cat.color)
 my_cat.speak()
 my_cat.intro()
+
+class Parent1:
+    def funcl(self):
+        print("This is Parent 1 function.")
+
+class Parent2:
+    def func2(self):
+        print("This is parent 2 function.")
+
+# create an object of child class
+obj = Child()
+
+# acces functions using the object
+obj.func1()
+obj.func2()
+obj.func3()
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def intro(self):
+        pass
+
+class Cat(Animal):
+    def speak(self):
+        return 'Meow'
+    
+class Dog(Animal):
+    def speak(self):
+        return 'Woof'
+    
+class Lion(Animal):
+    def speaks(self):
+        return 'Roar'
+    
+cat=Cat('Pussy')
+dog=Dog('Bull')
+lion=Lion('Shimba')
+
+print('cat.speak')
+print('dog.spak')
+print('lion.speak')
+
+
+
+
 
 
 
