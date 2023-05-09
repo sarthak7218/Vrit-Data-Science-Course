@@ -17,10 +17,5 @@ print(array2)
 print(type(array2))
 print(array2.ndim)
 
-
-print(np.zeros(5))
-
-print(np.zeros(2, 3))
-
-print(np.ones(5))
+print(np.linspace((1, 2), (5, 10), num=5))
 

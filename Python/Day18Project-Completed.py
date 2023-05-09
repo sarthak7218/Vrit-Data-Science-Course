@@ -49,12 +49,12 @@ class User:
         if admin_user.is_admin:
             self.__is_premium = False
 
-    def discount_10_percent(func):
-        def wrapper(self):
-            total_cost = func(self)
-            discounted_cost = total_cost * 0.9
-            return discounted_cost
-        return wrapper
+def discount_10_percent(func):
+    def wrapper(self):
+        total_cost = func(self)
+        discounted_cost = total_cost * 0.9
+        return discounted_cost
+    return wrapper
     
 class ShoppingCart:
      def __init__(self):
