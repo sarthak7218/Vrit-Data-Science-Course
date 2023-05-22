@@ -93,6 +93,16 @@ class ShoppingCart:
      
      def get_products(self):
         yield from self.products
+
+
+# Create some products
+
+product1 = Product("Shirt", 20)
+product2 = Product("Pants", 30)
+product3 = Product("Shoes", 50)
+
+
+    
     
 
 
