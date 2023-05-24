@@ -57,6 +57,7 @@ if selected_ball == 'red' and selected_urn == urn_a:
     print("Conditional probablity:", conditional_prob)
 else:
     print("The selected ball is not red ir urn A was not selected")
+    
 
 
 
