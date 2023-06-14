@@ -1,18 +1,47 @@
-import numpy as np
-from scipy import optimize
+def add(num1, num2):
+    return num1 + num2
 
-# Define a function to minimize
-def objective_func(x):
-    return (x[0] - 2) ** 2 + (x[1] - 3) ** 2
+def subtract(num1, num2):
+    return num1 - num2
 
-# Initial guess
-initial_guess = [0, 0]
+def multiply(num1, num2):
+    return num1 * num2
 
-# Minimize the function using the Nelder-Mead method
-result = optimize.minimize(objective_func, initial_guess, method='Nelder-Mead')
+def divide(num1, num2):
+    if num2 == 0:
+        raise ValueError("Error: Cannot divide by zero!")
+    return num1 / num2
 
-# Print the optimization result
-print("Optimization Result:")
-print(result)
-print("Optimized Solution:")
-print(result.x)
+print("Calculator")
+print("Select operation:")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+
+choice = int(input("Enter your choice (1-4): "))
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+result = None
+
+if choice == 1:
+    result = add(num1, num2)
+elif choice == 2:
+    result = subtract(num1, num2)
+elif choice == 3:
+    result = multiply(num1, num2)
+elif choice == 4:
+    try:
+        result = divide(num1, num2)
+    except ValueError as e:
+        print(e)
+        exit()
+else:
+    print("Error: Invalid choice!")
+
+print("Result: ", result)
+
+
+ 

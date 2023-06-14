@@ -29,3 +29,35 @@ for i in range(X_train.shape[1]):
     print("Selected Featues (Forward):", selected_features, "Score:", accuracy)
             
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
